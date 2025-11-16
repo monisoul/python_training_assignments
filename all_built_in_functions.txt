@@ -1,0 +1,221 @@
+1) Numeric / Math (دوال حسابية)
+
+abs(x)
+abs(-5) # 5
+
+divmod(a, b)
+divmod(9, 4) # (2, 1)
+
+pow(x, y[, z])
+pow(2, 3) # 8
+
+round(number[, ndigits])
+round(3.67) # 4
+
+*min(iterable, [, key, default])
+min(1, 5, 3) # 1
+
+*max(iterable, [, key, default])
+max(1, 5, 3) # 5
+
+sum(iterable, start=0)
+sum([1, 2, 3]) # 6
+
+int(x, base=10)
+int('5') # 5
+
+float(x)
+float('3.14') # 3.14
+
+complex([real[, imag]])
+complex(2, 3) # (2+3j)
+
+bin(x)
+bin(10) # '0b1010'
+
+oct(x)
+oct(8) # '0o10'
+
+hex(x)
+hex(255) # '0xff'
+
+2) Conversions & Bytes (دوال التحويل والبايتس)
+
+str(object='')
+str(55) # '55'
+
+repr(obj)
+repr('Amani') # "'Amani'"
+
+ascii(object)
+ascii('A❤') # 'A\\u2764'
+
+bytes([source])
+bytes([65, 66, 67]) # b'ABC'
+
+bytearray([source])
+bytearray(b'abc')
+
+memoryview(obj)
+memoryview(b'hello')
+
+ord(c)
+ord('A') # 65
+
+chr(i)
+chr(65) # 'A'
+
+bool(x)
+bool(1) # True
+
+3) Sequence & Iteration (دوال التكرار والقوائم)
+
+len(obj)
+len('Amani') # 5
+
+iter(obj)
+it = iter([1,2,3])
+
+next(iterator[, default])
+next(iter([1,2,3])) # 1
+
+range(start, stop[, step])
+list(range(3)) # [0,1,2]
+
+*sorted(iterable, , key=None, reverse=False)
+sorted([3,1,2]) # [1,2,3]
+
+reversed(seq)
+list(reversed([1,2,3])) # [3,2,1]
+
+enumerate(iterable, start=0)
+list(enumerate(['a','b'], start=1)) # [(1,'a'),(2,'b')]
+
+*zip(iterables)
+list(zip([1,2],[3,4])) # [(1,3),(2,4)]
+
+map(function, iterable)
+list(map(str,[1,2])) # ['1','2']
+
+filter(function, iterable)
+list(filter(lambda x:x>2,[1,3,4])) # [3,4]
+
+any(iterable)
+any([False, True]) # True
+
+all(iterable)
+all([True, True]) # True
+
+slice(start, stop[, step])
+s = slice(1,5)
+
+4) Collections & Constructors (دوال إنشاء المجموعات)
+
+list(iterable)
+list((1,2,3)) # [1,2,3]
+
+tuple(iterable)
+tuple([1,2,3]) # (1,2,3)
+
+set(iterable)
+set([1,2,3]) # {1,2,3}
+
+frozenset(iterable)
+frozenset([1,2,3])
+
+**dict(kwargs)
+dict(a=1, b=2) # {'a':1,'b':2}
+
+5) I/O & Execution (دوال الإدخال والإخراج وتنفيذ الكود)
+
+*print(objects, sep=' ', end='\n')
+print('Hello')
+
+input(prompt='')
+# name = input('Enter name: ')
+
+open(file, mode='r', ...)
+with open('file.txt','r') as f: ...
+
+eval(expression)
+eval('5+3') # 8
+
+exec(source)
+exec("x = 5")
+
+compile(source, filename, mode)
+code = compile('5+5','<string>','eval')
+
+breakpoint()
+# used for debugging
+
+6) Reflection & Introspection (دوال الفحص والانعكاس)
+
+type(obj) / type(name, bases, dict)
+type(5) # <class 'int'>
+
+isinstance(obj, classinfo)
+isinstance(5, int) # True
+
+issubclass(class, classinfo)
+issubclass(bool, int) # True
+
+callable(obj)
+callable(len) # True
+
+dir([obj])
+dir([])
+
+globals() / locals() / vars([obj])
+globals() # dict of global symbols
+locals() # dict of local symbols
+vars() # dict of symbol table
+
+id(obj)
+id(5)
+
+hash(obj)
+hash('Amani')
+
+help([obj])
+help(str)
+
+7) Classes & Objects (دوال الكائنات والكلاسات)
+
+object()
+object() # base object
+
+getattr(obj, name[, default])
+getattr('A','upper')
+
+setattr(obj, name, value)
+setattr(obj, 'x', 5)
+
+delattr(obj, name)
+delattr(obj, 'x')
+
+hasattr(obj, name)
+hasattr('A','upper')
+
+property(fget=None, fset=None, fdel=None, doc=None)
+# used in classes
+
+classmethod(func) / staticmethod(func)
+# decorators inside class
+
+super([type[, object-or-type]])
+super() # access parent class
+
+8) Helpers & Others (دوال مساعدة وأخرى)
+
+format(value, format_spec='')
+format(255,'x') # 'ff'
+
+import(name, globals=None, locals=None, fromlist=(), level=0)
+__import__('math') # dynamic import
+
+compile(source, filename, mode) (مذكورة أعلاه)
+
+eval(expression) (مذكورة أعلاه)
+
+exec(source) (مذكورة أعلاه)
